@@ -5,9 +5,9 @@ class Tape(object):
         
     def __str__(self):
         s = ""
-        min_used_index = min(self.tape.keys()) 
-        max_used_index = max(self.tape.keys())
-        for i in range(min_used_index, max_used_index):
+        min_index = min(self.tape.keys()) 
+        max_index = max(self.tape.keys())
+        for i in range(min_index, max_index):
             s += self.tape[i]
         return s    
    
