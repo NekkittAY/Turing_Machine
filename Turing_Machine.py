@@ -25,3 +25,4 @@ class Turing_Machine:
                 print(self.endTape)
                 break
             print(self.endTape)
+            
