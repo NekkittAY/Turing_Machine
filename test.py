@@ -1,18 +1,8 @@
-from turing_machine import TuringMachine
-init_state = "init",
-acecept = ["final"],
-func = {("init", "0"):("init", "1", "R"),
-        ("init", "1"):("init", "0", "R"),
-        ("init", " "):("final"," ", "N")
-        }
-final = {"final"}
+from Turing_Machine import Turing_Machine
 
-t = TuringMachine("101", 
-                  init_state = "init",
-                  final = final,
-                  func = func)
-                  
-print("Input on Tape:\n" + t.get_tape())
-while not t.final_tape():
-    t.step()
-print("Result of the Turing machine calculation:\n" + t.get_tape()) 
+start = list(input().split()) # 0 1 1 0 1
+position = int(input()) # 0
+rules = {"0":"1R","1":"0R"}
+TM = Turing_Machine(start,position,rules)
+TM.tape()
+TM.Machine()
